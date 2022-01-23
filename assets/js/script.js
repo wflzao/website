@@ -1,4 +1,5 @@
 window.onload = function () {
+  window.location.href = window.location.origin + "#";
   window.setTimeout(fade_out, 500);
 };
 
