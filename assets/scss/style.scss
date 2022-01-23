@@ -572,7 +572,8 @@ video {
   align-items: center;
 }
 
-.about .row .col-12 img {
+.about .row .col-12 .js,
+.about .row .col-12 .css {
   width: 125px;
   height: 125px;
   margin-left: 20px;
@@ -581,7 +582,7 @@ video {
   margin-top: 25px;
 }
 
-.about .row .col-12 img:nth-child(1) {
+.about .row .col-12 .html {
   width: 143px;
   height: 143px;
 }
