@@ -572,20 +572,6 @@ video {
   align-items: center;
 }
 
-.about .row .col-12 .js,
-.about .row .col-12 .css {
-  width: 125px;
-  height: 125px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 10%;
-  margin-top: 25px;
-}
-
-.about .row .col-12 .html {
-  width: 143px;
-  height: 143px;
-}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about .about-title {
     padding: 0 0;
