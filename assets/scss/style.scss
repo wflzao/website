@@ -294,6 +294,7 @@ video {
     padding: 10px 0;
   }
 }
+
 .navbar {
   padding: 0;
   position: relative;
@@ -368,6 +369,14 @@ video {
   text-transform: capitalize;
 }
 
+.navbar-nav .nav-item a.disabled {
+  cursor: default !important;
+  color: rgb(100, 100, 100) !important;
+}
+
+.navbar-nav .nav-item a.disabled:hover {
+  color: rgb(100, 100, 100) !important;
+}
 .navbar-nav .nav-item a::after {
   opacity: 0;
   visibility: hidden;

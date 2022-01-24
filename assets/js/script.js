@@ -1,5 +1,5 @@
 window.onload = function () {
-  window.location.href = window.location.origin + "/#";
+  $("html, body").animate({ scrollTop: 0 }, "fast");
   window.setTimeout(fade_out, 500);
 };
 
@@ -30,3 +30,13 @@ $(window).scroll(function () {
     $(".scroll-indicator").css("opacity", 1);
   }
 });
+
+function anchorjump(anchor) {
+  let url = location.href;
+  location.href = "#" + anchor;
+  history.replaceState(null, null, url);
+}
+
+function active() {
+  $("html, body").animate({ scrollTop: 0 }, "fast");
+}
