@@ -39,3 +39,23 @@ function anchorJump(anchor) {
 function active() {
   $("html, body").animate({ scrollTop: 0 }, "fast");
 }
+
+$(function () {
+  function sendData($form) {
+    let dataString = $form.serialize();
+
+    return $.ajax({
+      type: "POST",
+      url: "/assets/php/message.php",
+      data: dataString,
+    });
+  }
+
+  $("form").on("submit", function (e) {
+    e.preventDefault();
+
+    sendData($(this)).done(function () {
+      $("#h3").html("<h2>submitted</h2>").hide();
+    });
+  });
+});
