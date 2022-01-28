@@ -23,7 +23,6 @@ $(window).scroll(function () {
   var windowHeight = $(window).height();
   var position = topWindow / windowHeight;
   position = 1 - position;
-  console.log(position);
   if (position < 1) {
     $(".scroll-indicator").css("opacity", 0);
   } else {
