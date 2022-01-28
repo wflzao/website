@@ -31,7 +31,7 @@ $(window).scroll(function () {
   }
 });
 
-function anchorjump(anchor) {
+function anchorJump(anchor) {
   let url = location.href;
   location.href = "#" + anchor;
   history.replaceState(null, null, url);

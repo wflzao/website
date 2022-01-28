@@ -1,208 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Header Setup -->
-    <title>🍦</title>
-    <link rel="icon" href="assets/images/main.gif" />
-    <!--CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/scss/style.min.css" />
-  </head>
-  <body>
-    <div class="preloader">
-      <div class="preloader-inner">
-        <div class="preloader-icon">
-          <span></span>
-          <span></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Header Setup -->
+  <title>🍦</title>
+  <link rel="icon" href="assets/images/main.gif" />
+  <!--CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/scss/style.min.css" />
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-icon">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header navbar-area">
+    <div class="container">
+      <div class="nav-inner">
+        <nav class="navbar navbar-expand-lg" style="background: #1d1f20">
+          <a class="navbar-brand" data-aos="fade" data-aos-duration="1000" href="index.html">
+            <p>W F L</p>
+          </a>
+
+          <button class="navbar-toggler mobile-menu-btn collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse sub-menu-bar collapse" id="navbarSupportedContent">
+            <ul id="nav" class="navbar-nav">
+              <li class="nav-item">
+                <a onclick="active()" class="page-scroll" data-aos="fade-down" data-aos-duration="500"
+                  aria-label="Toggle navigation" style="cursor: pointer">Home</a>
+              </li>
+              <li class="nav-item">
+                <a onclick="anchorJump('about');" class="page-scroll" data-aos="fade-down" data-aos-duration="500"
+                  data-aos-delay="250" aria-label="Toggle navigation" style="cursor: pointer">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="page-scroll disabled" data-aos="fade-down" data-aos-duration="500"
+                  data-aos-delay="400" aria-label="Toggle navigation">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://github.com/niiqmh" class="page-scroll" data-aos="fade-down" data-aos-duration="500"
+                  data-aos-delay="550" aria-label="Toggle navigation">Repos</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="main text-left" style="background: #1d1f20">
+    <div class="container">
+      <div class="section-title">
+        <h3 data-aos="fade-right" data-aos-delay="1000" data-aos-duration="500">
+          Hey there,
+        </h3>
+        <h2 data-aos="fade-up" data-aos-delay="1150" data-aos-duration="500">
+          I am Waffle.
+        </h2>
+      </div>
+      <div class="introduction">
+        <p data-aos="fade-up" data-aos-delay="1250" data-aos-duration="400">
+          I'm a future full-stack developer from Minas Gerais, Brazil. <br />
+          My priority is to learn web development as fast as I can,
+          <br />
+          so I can seek developer jobs in the future.
+        </p>
+      </div>
+      <div class="code-card" data-aos="fade-left" data-aos-delay="1300">
+        <pre>1&nbsp;&nbsp;<span style="color: #5ad4e6">function</span> <span style="color: #7bd88f">waffle</span> <span style="color: #ffd700">() {</span></pre>
+        <pre>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #fff;">webcam</span><span style="color: #8b888f">.</span><span style="color: #7bd88f">AddEventListener</span><span style="color: #da70d6">(</span><span style="color: #8b888f">"</span><span style="color: #ffd700">move</span><span style="color: #8b888f">",</span> <span style="color: #5ad4e6">function</span> <span style="color: #87cefa">() {</span></pre>
+        <pre>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #fff">user<span style="color: #8b888f">.</span>name</span> <span style="color: #fc618d">=</span> <span style="color: #8b888f">"<span style="color:#ffd700">waffle</span>";</span></pre>
+        <pre>4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #fff">user<span style="color: #8b888f">.</span>action</span> <span style="color: #fc618d">=</span> <span style="color: #ffd700">[<span style="color: #8b888f">"</span>DEVELOPING<span style="color: #8b888f">", "</span>GAMING<span style="color: #ffd700">"</span>]<span style="color: #8b888f">;</span></span></pre>
+        <pre>5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #fff">user<span style="color: #8b888f">.</span>nationality</span> <span style="color: #fc618d">=</span> <span style="color: #8b888f">"<span style="color: #ffd700">Brazil</span>";</span></pre>
+        <pre>6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #87cefa">}</span><span style="color: #da70d6">)</span><span style="color: #8b888f">;</span></pre>
+        <pre>7&nbsp;&nbsp;<span style="color: #ffd700">}</span></pre>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="indicator">
+    <div class="scroll-indicator">
+      <div class="dots"></div>
+    </div>
+  </section>
+
+  <section class="about" id="about" style="background: #1d1f20">
+    <div class="container">
+      <div class="about-title text-center">
+        <h3 data-aos="zoom-in" data-aos-delay="250">!?</h3>
+        <h2 data-aos="zoom-out" data-aos-delay="250">About Me</h2>
+      </div>
+      <div class="body">
+        <p data-aos="fade-right" data-aos-delay="450">
+          Ay! I'm Waffle, usually refered to as wfl, and I am a computer
+          enthusiast since 2018 and a batch developer since 2021. I've
+          recently started web-developing and I am focusing on it enough for
+          me to get a job.
+        </p>
+        <p data-aos="fade-right" data-aos-delay="500">
+          At the current rate, I plan on going deep into JS development and
+          possibly react so I can focus on what i like the most, the
+          front-end, but that doesn't stops me from becoming an experienced
+          back-end developer too.
+        </p>
+        <p data-aos="fade-right" data-aos-delay="550">
+          Even though I love developing websites, it Isn't my only hobby. I
+          also love playing basketball, playing the piano and specially
+          playing VALORANT.
+        </p>
+      </div>
+      <div class="languages">
+        <h3 class="text-center" data-aos="fade-right" data-aos-delay="600">
+          These are the languages I'm currently working with:
+        </h3>
+      </div>
+      <div class="row">
+        <div class="col-12" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+          <img class="html"
+            style="width: 143px; height: 143px; margin-left: 20px; margin-right: 20px; border-radius: 10%; margin-top: 25px;"
+            data-aos="zoom-in" data-aos-delay="700"
+            src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_html.svg" alt="">
+          <img class="js"
+            style="width: 125px; height: 125px; margin-left: 20px; margin-right: 20px; border-radius: 10%; margin-top: 25px;"
+            data-aos="zoom-in" data-aos-delay="700"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png"
+            alt="">
+          <img class="css"
+            style="width: 125px; height: 125px; margin-left: 20px; margin-right: 20px; border-radius: 10%; margin-top: 25px;"
+            data-aos="zoom-in" data-aos-delay="700" src="https://static.cdnlogo.com/logos/c/18/css.svg" alt="">
         </div>
       </div>
     </div>
+  </section>
 
-    <header class="header navbar-area">
-      <div class="container">
-        <div class="nav-inner">
-          <nav class="navbar navbar-expand-lg" style="background: #1d1f20">
-            <a
-              class="navbar-brand"
-              data-aos="fade"
-              data-aos-duration="1000"
-              href="index.html"
-            >
-              <p>W F L</p>
-            </a>
-
-            <button
-              class="navbar-toggler mobile-menu-btn collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="toggler-icon"></span>
-              <span class="toggler-icon"></span>
-              <span class="toggler-icon"></span>
-            </button>
-
-            <div
-              class="navbar-collapse sub-menu-bar collapse"
-              id="navbarSupportedContent"
-            >
-              <ul id="nav" class="navbar-nav">
-                <li class="nav-item">
-                  <a
-                    onclick="active()"
-                    class="page-scroll"
-                    data-aos="fade-down"
-                    data-aos-duration="500"
-                    aria-label="Toggle navigation"
-                    style="cursor: pointer"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    onclick="anchorjump('about');"
-                    class="page-scroll"
-                    data-aos="fade-down"
-                    data-aos-duration="500"
-                    data-aos-delay="250"
-                    aria-label="Toggle navigation"
-                    style="cursor: pointer"
-                    >About</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="page-scroll disabled"
-                    data-aos="fade-down"
-                    data-aos-duration="500"
-                    data-aos-delay="400"
-                    aria-label="Toggle navigation"
-                    >Contact</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://github.com/niiqmh"
-                    class="page-scroll"
-                    data-aos="fade-down"
-                    data-aos-duration="500"
-                    data-aos-delay="550"
-                    aria-label="Toggle navigation"
-                    >Repos</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+  <section class="contact" style="height: 100vh">
+    <div class="container">
+      <div class="contact-title text-left">
+        <h3 data-aos="zoom-in" data-aos-delay="250">Get in touch</h3>
+        <h2 data-aos="zoom-out" data-aos-delay="250">Contact</h2>
       </div>
-    </header>
+      <form id="contact-form" class="form" action="" method="post" data-recaptcha-form="contact">
+        <div class="form__row">
+          <div class="form__field">
+            <label for="name" class="form__label">
+              Name <span class="form__required">*</span>
+            </label>
+            <input id="name" name="name" type="text" required="">
+          </div>
 
-    <section class="main text-left" style="background: #1d1f20">
-      <div class="container">
-        <div class="section-title">
-          <h3
-            data-aos="fade-right"
-            data-aos-delay="1000"
-            data-aos-duration="500"
-          >
-            Hey there,
-          </h3>
-          <h2 data-aos="fade-up" data-aos-delay="1150" data-aos-duration="500">
-            I am Waffle.
-          </h2>
-        </div>
-        <div class="introduction">
-          <p data-aos="fade-up" data-aos-delay="1250" data-aos-duration="400">
-            I'm a future full-stack developer from Minas Gerais, Brazil. <br />
-            My priority is to learn web development as fast as I can,
-            <br />
-            so I can seek developer jobs in the future.
-          </p>
-        </div>
-        <div class="code-card" data-aos="fade-left" data-aos-delay="1300">
-                    <pre>1&nbsp;&nbsp;<span style="color: #5ad4e6">function</span> <span style="color: #7bd88f">waffle</span> <span style="color: #ffd700">() {</span></pre>
-                      <pre>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #fff;">webcam</span><span style="color: #8b888f">.</span><span style="color: #7bd88f">AddEventListener</span><span style="color: #da70d6">(</span><span style="color: #8b888f">"</span><span style="color: #ffd700">move</span><span style="color: #8b888f">",</span> <span style="color: #5ad4e6">function</span> <span style="color: #87cefa">() {</span></pre>
-                        <pre>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #fff">user<span style="color: #8b888f">.</span>name</span> <span style="color: #fc618d">=</span> <span style="color: #8b888f">"<span style="color:#ffd700">waffle</span>";</span></pre>
-                        <pre>4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #fff">user<span style="color: #8b888f">.</span>action</span> <span style="color: #fc618d">=</span> <span style="color: #ffd700">[<span style="color: #8b888f">"</span>DEVELOPING<span style="color: #8b888f">", "</span>GAMING<span style="color: #ffd700">"</span>]<span style="color: #8b888f">;</span></span></pre>
-                        <pre>5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #fff">user<span style="color: #8b888f">.</span>nationality</span> <span style="color: #fc618d">=</span> <span style="color: #8b888f">"<span style="color: #ffd700">Brazil</span>";</span></pre>
-                        <pre>6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #87cefa">}</span><span style="color: #da70d6">)</span><span style="color: #8b888f">;</span></pre>
-                        <pre>7&nbsp;&nbsp;<span style="color: #ffd700">}</span></pre>
-                      </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="indicator">
-      <div class="scroll-indicator">
-        <div class="dots"></div>
-      </div>
-    </section>
-
-    <section class="about" id="about" style="background: #1d1f20">
-      <div class="container">
-        <div class="about-title text-center">
-          <h3 data-aos="zoom-in" data-aos-delay="250">!?</h3>
-          <h2 data-aos="zoom-out" data-aos-delay="250">About Me</h2>
-        </div>
-        <div class="body">
-          <p data-aos="fade-right" data-aos-delay="450">
-            Ay! I'm Waffle, usually refered to as wfl, and I am a computer
-            enthusiast since 2018 and a batch developer since 2021. I've
-            recently started web-developing and I am focusing on it enough for
-            me to get a job.
-          </p>
-          <p data-aos="fade-right" data-aos-delay="500">
-            At the current rate, I plan on going deep into JS development and
-            possibly react so I can focus on what i like the most, the
-            front-end, but that doesn't stops me from becoming an experienced
-            back-end developer too.
-          </p>
-          <p data-aos="fade-right" data-aos-delay="550">
-            Even though I love developing websites, it Isn't my only hobby. I
-            also love playing basketball, playing the piano and specially
-            playing VALORANT.
-          </p>
-        </div>
-        <div class="languages">
-          <h3 class="text-center" data-aos="fade-right" data-aos-delay="600">
-            These are the languages I'm currently working with:
-          </h3>
-        </div>
-        <div class="row">
-          <div class="col-12" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
-            <img class="html" style="width: 143px; height: 143px; margin-left: 20px; margin-right: 20px; border-radius: 10%; margin-top: 25px;" data-aos="zoom-in" data-aos-delay="700" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_html.svg" alt="">
-            <img class="js" style="width: 125px; height: 125px; margin-left: 20px; margin-right: 20px; border-radius: 10%; margin-top: 25px;" data-aos="zoom-in" data-aos-delay="700" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" alt="">
-            <img class="css" style="width: 125px; height: 125px; margin-left: 20px; margin-right: 20px; border-radius: 10%; margin-top: 25px;" data-aos="zoom-in" data-aos-delay="700" src="https://static.cdnlogo.com/logos/c/18/css.svg" alt="">
+          <div class="form__field">
+            <label for="email" class="form__label">
+              Email <span class="form__required">*</span>
+            </label>
+            <input id="email" name="email" type="email" required="">
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+        <div class="form__row">
+          <div class="form__field">
+            <label for="subject" class="form__label">
+              Subject <span class="form__required">*</span>
+            </label>
+            <input id="subject" name="subject" type="text" required="">
+          </div>
+        </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- AOS js -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Main JS script -->
-    <script type="text/javascript" src="assets/js/script.js"></script>
-  </body>
+        <div class="form__row">
+          <div class="form__field">
+            <label for="message" class="form__label">
+              Message <span class="form__required">*</span>
+            </label>
+            <textarea id="message" name="message" required=""></textarea>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__field">
+            <button class="btn">
+              Send Message
+            </button>
+          </div>
+        </div>
+
+        <input type="hidden" name="_token" value="o6B3r01bdzxSnp4ZTzGFYvNraY0j9b1HZSAN0klu">
+      </form>
+    </div>
+  </section>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- AOS js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Main JS script -->
+  <script type="text/javascript" src="assets/js/script.js"></script>
+
+  <script defer src="https://www.google.com/recaptcha/api.js?render=6Lf1dBAcAAAAAKvLKqjx_-vitdVgOvEviQgGLhXe"></script>
+</body>
+
 </html>
