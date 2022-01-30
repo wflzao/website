@@ -40,22 +40,183 @@ function active() {
   $("html, body").animate({ scrollTop: 0 }, "fast");
 }
 
-$(function () {
-  function sendData($form) {
-    let dataString = $form.serialize();
+var form = document.getElementById("form");
 
-    return $.ajax({
-      type: "POST",
-      url: "/assets/php/message.php",
-      data: dataString,
+async function handleSubmit(event) {
+  event.preventDefault();
+
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        const status = document.getElementById("status");
+        const phrases = ["Submitted.", "Get In Touch"];
+        let i = 0;
+        let j = 0;
+        let k = 0;
+        let currentPhrase = [];
+        let isDeleting = false;
+        let isEnd = false;
+        function loop() {
+          isEnd = false;
+          status.innerHTML = currentPhrase.join("");
+          k++;
+          console.log(k);
+          if (i < phrases.length) {
+            if (k > 32) {
+              return;
+            }
+            if (!isDeleting && j <= phrases[i].length) {
+              currentPhrase.push(phrases[i][j]);
+              j++;
+              status.innerHTML = currentPhrase.join("");
+            }
+
+            if (isDeleting && j <= phrases[i].length) {
+              currentPhrase.pop(phrases[i][j]);
+              j--;
+              status.innerHTML = currentPhrase.join("");
+            }
+
+            if (j == phrases[i].length) {
+              isEnd = true;
+              isDeleting = true;
+            }
+
+            if (isDeleting && j === 0) {
+              currentPhrase = [];
+              isDeleting = false;
+              i++;
+              if (i === phrases.length) {
+                i = 0;
+              }
+            }
+          }
+          const spedUp = Math.random() * (80 - 50) + 50;
+          const normalSpeed = Math.random() * (300 - 200) + 200;
+          const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
+          setTimeout(loop, time);
+        }
+
+        loop();
+        form.reset();
+      } else {
+        response.json().then((data) => {
+          if (Object.hasOwn(data, "errors")) {
+            const status = document.getElementById("status");
+            status.innerHTML = data["errors"]
+              .map((error) => error["message"])
+              .join(", ");
+          } else {
+            const status = document.getElementById("status");
+            const phrases = ["Error.", "Get In Touch"];
+            let i = 0;
+            let j = 0;
+            let k = 0;
+            let currentPhrase = [];
+            let isDeleting = false;
+            let isEnd = false;
+            function loop() {
+              isEnd = false;
+              status.innerHTML = currentPhrase.join("");
+              k++;
+              if (i < phrases.length) {
+                if (k > 24) {
+                  return;
+                }
+                if (!isDeleting && j <= phrases[i].length) {
+                  currentPhrase.push(phrases[i][j]);
+                  j++;
+                  status.innerHTML = currentPhrase.join("");
+                }
+
+                if (isDeleting && j <= phrases[i].length) {
+                  currentPhrase.pop(phrases[i][j]);
+                  j--;
+                  status.innerHTML = currentPhrase.join("");
+                }
+
+                if (j == phrases[i].length) {
+                  isEnd = true;
+                  isDeleting = true;
+                }
+
+                if (isDeleting && j === 0) {
+                  currentPhrase = [];
+                  isDeleting = false;
+                  i++;
+                  if (i === phrases.length) {
+                    i = 0;
+                  }
+                }
+              }
+              const spedUp = Math.random() * (80 - 50) + 50;
+              const normalSpeed = Math.random() * (300 - 200) + 200;
+              const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
+              setTimeout(loop, time);
+            }
+
+            loop();
+          }
+        });
+      }
+    })
+    .catch((error) => {
+      const status = document.getElementById("status");
+      const phrases = ["Error.", "Get In Touch"];
+      let i = 0;
+      let j = 0;
+      let k = 0;
+      let currentPhrase = [];
+      let isDeleting = false;
+      let isEnd = false;
+      function loop() {
+        isEnd = false;
+        status.innerHTML = currentPhrase.join("");
+        k++;
+        if (i < phrases.length) {
+          if (k > 24) {
+            return;
+          }
+          if (!isDeleting && j <= phrases[i].length) {
+            currentPhrase.push(phrases[i][j]);
+            j++;
+            status.innerHTML = currentPhrase.join("");
+          }
+
+          if (isDeleting && j <= phrases[i].length) {
+            currentPhrase.pop(phrases[i][j]);
+            j--;
+            status.innerHTML = currentPhrase.join("");
+          }
+
+          if (j == phrases[i].length) {
+            isEnd = true;
+            isDeleting = true;
+          }
+
+          if (isDeleting && j === 0) {
+            currentPhrase = [];
+            isDeleting = false;
+            i++;
+            if (i === phrases.length) {
+              i = 0;
+            }
+          }
+        }
+        const spedUp = Math.random() * (80 - 50) + 50;
+        const normalSpeed = Math.random() * (300 - 200) + 200;
+        const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
+        setTimeout(loop, time);
+      }
+
+      loop();
     });
-  }
-
-  $("form").on("submit", function (e) {
-    e.preventDefault();
-
-    sendData($(this)).done(function () {
-      $("#h3").html("<h2>submitted</h2>").hide();
-    });
-  });
-});
+}
+form.addEventListener("submit", handleSubmit);

@@ -152,25 +152,22 @@
     </div>
   </section>
 
-  <section class="contact" style="height: 100vh">
+  <section class="contact" style="height: 75vh">
     <div class="container">
       <div class="contact-title text-left">
-        <h3 id="h3"data-aos="zoom-in" data-aos-delay="250">Get in touch</h3>
-        <h2 data-aos="zoom-out" data-aos-delay="250">Contact</h2>
+        <h3 id="status" data-aos="fade-down" data-aos-delay="250">Get in touch</h3>
+        <h2 data-aos="fade-right" data-aos-delay="400" data-aos-offset="10px">Contact</h2>
       </div>
-      <form id="contact-form" class="form" action="">
-        <input type="hidden" name="_honey" style="display: none;">
-        <input type="hidden" name="_captcha" value="false">
-
+      <form id="form" class="form" action="https://formspree.io/f/mgedaegn" method="POST">
         <div class="form__row">
-          <div class="form__field">
+          <div class="form__field" data-aos="fade-right" data-aos-delay="600">
             <label for="name" class="form__label">
               Name <span class="form__required">*</span>
             </label>
             <input id="name" name="name" type="text" required="">
           </div>
 
-          <div class="form__field">
+          <div class="form__field" data-aos="fade-left" data-aos-delay="600">
             <label for="email" class="form__label">
               Email <span class="form__required">*</span>
             </label>
@@ -179,7 +176,7 @@
         </div>
 
         <div class="form__row">
-          <div class="form__field">
+          <div class="form__field" data-aos="fade-right" data-aos-delay="650">
             <label for="subject" class="form__label">
               Subject <span class="form__required">*</span>
             </label>
@@ -187,7 +184,7 @@
           </div>
         </div>
 
-        <div class="form__row">
+        <div class="form__row" data-aos="fade-right" data-aos-delay="700" data-aos-offset="30px">
           <div class="form__field">
             <label for="message" class="form__label">
               Message <span class="form__required">*</span>
@@ -195,9 +192,8 @@
             <textarea id="message" name="message" required=""></textarea>
           </div>
         </div>
-
         <div class="form__row">
-          <div class="form__field">
+          <div class="form__field" data-aos="fade-right" data-aos-delay="750" data-aos-offset="50px">
             <button class="btn">
               Send Message
             </button>
