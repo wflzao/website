@@ -610,11 +610,9 @@ video {
 }
 
 .contact {
+  height: 70vh;
   max-width: 675px;
-  margin-left: auto !important;
-  margin-right: auto !important;
 }
-
 .contact .contact-title {
   text-align: left;
   position: relative;
@@ -791,12 +789,36 @@ textarea {
     transition: box-shadow 0.35s ease, border-color 0.35s ease;
   }
 }
+// @media (max-width: 1500px) {
+//   .contact {
+//     margin-top: 0px;
+//   }
+// }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 991px) and (max-width: 1500px) {
+  .contact {
+    margin-top: 300px;
+  }
+}
+@media only screen and (min-width: 1501px) and (max-width: 1700px) {
+  .contact {
+    margin-top: 150px;
+  }
 }
 
-@media (max-width: 767px) {
+@media only screen and (min-width: 1701px) and (max-width: 1919px) {
   .contact {
-    margin-top: 700px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .contact {
+    margin-top: 500px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .contact {
+    margin-top: 500px;
   }
 }
