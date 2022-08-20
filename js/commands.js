@@ -15,9 +15,11 @@ let ram = navigator.deviceMemory;
 let hostname = location.hostname;
 
 if (userAgent.indexOf("Win") != -1) Name = "win";
-if (userAgent.indexOf("Mac") != -1) Name = "mac";
+if (userAgent.indexOf("Macintosh") != -1) Name = "mac";
 if (userAgent.indexOf("X11") != -1) Name = "unix";
 if (userAgent.indexOf("Linux") != -1) Name = "linux";
+if (userAgent.indexOf("Android") != -1) Name = "android";
+if (userAgent.indexOf("iPhone") != -1) Name = "ios";
 
 if (userAgent.match(/chrome|chromium|crios/i)) {
   browserName = "chrome";
