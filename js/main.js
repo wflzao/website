@@ -119,7 +119,7 @@ function commander(cmd) {
         "color2",
         0
       );
-      addLine("<br>", "", 0); 
+      addLine("<br>", "", 0);
       newTab(email);
       break;
     case "clear":
@@ -208,7 +208,7 @@ function setup() {
 setup();
 
 function startTimer() {
-  timeoutID = window.setTimeout(goInactive, 10000);
+  timeoutID = window.setTimeout(goInactive, 5000);
 }
 
 function resetTimer() {
