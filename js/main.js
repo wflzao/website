@@ -104,7 +104,7 @@ function commander(cmd) {
       loopLines(whoami, "margin", 80);
       break;
     case "socials":
-      loopLines(social, "color2 margin", 80);
+      loopLines(socials, "color2 margin", 80);
       break;
     case "projects":
       loopLines(projects, "color2 margin", 80);

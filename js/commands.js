@@ -90,7 +90,7 @@ whoami = [
   "<br>",
 ];
 
-social = [
+socials = [
   "<br>",
   'youtube        <a class="link" href="' +
     youtube +
@@ -124,13 +124,14 @@ help = [
   "<br>",
   '<span class="command">whois</span>          Who is Waffle?',
   '<span class="command">whoami</span>         Why ask?',
-  '<span class="command">social</span>         Display social networks',
+  '<span class="command">socials</span>        Display social networks',
   '<span class="command">projects</span>       View coding projects',
   '<span class="command">history</span>        View command history',
   '<span class="command">help</span>           I wonder what this does',
   '<span class="command">email</span>          Do not email me',
   '<span class="command">clear</span>          Clear terminal',
   '<span class="command">fet.sh</span>         Display the fetch',
+  '<span class="command">web.old</span>        Open the old version of my website',
   "<br>",
 ];
 
