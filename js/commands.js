@@ -74,6 +74,10 @@ if (day == 0) {
   }
 }
 
+function changeColor(color) {
+  r.style.setProperty("--accent", `#${color}`);
+}
+
 whois = [
   "<br>",
   "Hey there, I am Waffle, usually refered to as wfl.",
@@ -148,7 +152,3 @@ fetch = [
   `<span style="color:#f2777a;font-size:21.5px">&nbsp▅</span><span style="color:#f9a270;font-size:21.5px;margin-left:-.5px">▅</span><span style="color:#ffcc66;font-size:21.5px;margin-left:-.5px">▅</span><span style="color:#99cc99;font-size:21.5px;margin-left:-.5px">▅</span><span style="color:#66cccc;font-size:21.5px;margin-left:-.5px">▅</span><span style="color:#6699cc ;font-size:21.5px;margin-left:-.5px">▅</span><span style="color:#cc99cc;font-size:21.5px;margin-left:-.5px">▅</span>`,
   `<br>`,
 ];
-
-function changeColor(color) {
-  r.style.setProperty("--accent", `#${color}`);
-}
