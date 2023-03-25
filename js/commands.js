@@ -1,6 +1,5 @@
 let youtube = "https://www.youtube.com/channel/UCBKIre3WUGLh4Vb_JG_wIwA/";
 let twitter = "https://www.twitter.com/wflzao/";
-let instagram = "https://www.instagram.com/wflzao/";
 let github = "https://github.com/wflzao/";
 let githubRepos = "https://github.com/wflzao?tab=repositories ";
 let email = "mailto:wafflemain@protonmail.com";
@@ -103,10 +102,6 @@ socials = [
   'twitter        <a class="link" href="' +
     twitter +
     '" target="_blank">twitter/wflzao' +
-    "</a>",
-  'instagram      <a class="link" href="' +
-    instagram +
-    '" target="_blank">instagram/wflzao' +
     "</a>",
   'github         <a class="link" href="' +
     github +
