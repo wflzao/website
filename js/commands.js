@@ -81,9 +81,8 @@ whois = [
   "<br>",
   "Hey there, I am Waffle, usually refered to as wfl.",
   "I'm a computer enthusiast since 2018, and i live in Minas Gerais, Brazil. ",
-  "I'm currently a student in middle school, and I'm also studying computer science by myself.",
-  "I possibly want to seek for developer jobs in the future, so I can get some good money while still at high school.",
-  "Besides that, I also like to play piano and basketball.",
+  "I'm currently a student in high school.",
+  "Uh, I like to play piano and basketball.",
   "<br>",
 ];
 
